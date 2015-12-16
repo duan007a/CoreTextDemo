@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     CTFrameParserConfig *config = [CTFrameParserConfig new];
-    config.
+    
 }
 
 - (void)didReceiveMemoryWarning {
