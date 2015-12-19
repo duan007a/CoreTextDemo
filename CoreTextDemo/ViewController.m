@@ -30,6 +30,10 @@
                           " 测试设置不同的绘制区域带来的界面变化。" config:config];
     self.ctDisplayView.data = data;
     self.ctDisplayView.height = data.height;
+    
+    self.ctDisplayView.centerX = self.view.width/2;
+    self.ctDisplayView.centerY = self.view.height/2;
+    self.ctDisplayView.backgroundColor = RGB(255.f, 0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
