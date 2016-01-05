@@ -22,18 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
+    
     CTFrameParserConfig *config = [CTFrameParserConfig new];
-    CoreTextData *data = [CTFrameParser parseContent:@"Hello World! "
-                          " 创建绘制的区域，CoreText 本身支持各种文字排版的区域，"
-                          " 我们这里简单地将 UIView 的整个界面作为排版的区域。"
-                          " 为了加深理解，建议读者将该步骤的代码替换成如下代码，"
-                          " 测试设置不同的绘制区域带来的界面变化。" config:config];
+    CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
     self.ctDisplayView.data = data;
     self.ctDisplayView.height = data.height;
     
     self.ctDisplayView.centerX = self.view.width/2;
     self.ctDisplayView.centerY = self.view.height/2;
-    self.ctDisplayView.backgroundColor = RGB(255.f, 0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
