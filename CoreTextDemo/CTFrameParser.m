@@ -46,7 +46,7 @@
                     imageData.position = [result length];
                     [imageArray addObject:imageData];
                     //创建空白占位符，并且设置它的CTRunDelegate信息
-                    NSAttributedString *attributedString = [self parseAttributedContentFromNSDictionary:dict config:config];
+                    NSAttributedString *attributedString = [self parseImageDataFromNSDictionary:dict config:config];
                     [result appendAttributedString:attributedString];
                 }
             }

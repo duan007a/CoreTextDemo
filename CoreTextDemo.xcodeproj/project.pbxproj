@@ -10,7 +10,7 @@
 		6812B3D11C200C5800D17288 /* CTDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6812B3D01C200C5800D17288 /* CTDisplayView.m */; };
 		6812B3D31C200DB100D17288 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6812B3D21C200DB100D17288 /* CoreText.framework */; };
 		682A10541C3B987F00659D62 /* coretext_image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682A10521C3B987F00659D62 /* coretext_image_1.jpg */; };
-		682A10551C3B987F00659D62 /* cortext_image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682A10531C3B987F00659D62 /* cortext_image_2.jpg */; };
+		682A10551C3B987F00659D62 /* coretext_image_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 682A10531C3B987F00659D62 /* coretext_image_2.jpg */; };
 		682A10581C3BD1BF00659D62 /* CoreTextImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 682A10571C3BD1BF00659D62 /* CoreTextImageData.m */; };
 		6837974B1C3A4A0F00FD3432 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = 6837974A1C3A4A0F00FD3432 /* content.json */; };
 		686430021C0C2D8B00944195 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 686430011C0C2D8B00944195 /* main.m */; };
@@ -50,7 +50,7 @@
 		6812B3D01C200C5800D17288 /* CTDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDisplayView.m; sourceTree = "<group>"; };
 		6812B3D21C200DB100D17288 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		682A10521C3B987F00659D62 /* coretext_image_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coretext_image_1.jpg; sourceTree = "<group>"; };
-		682A10531C3B987F00659D62 /* cortext_image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cortext_image_2.jpg; sourceTree = "<group>"; };
+		682A10531C3B987F00659D62 /* coretext_image_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coretext_image_2.jpg; sourceTree = "<group>"; };
 		682A10561C3BD1BF00659D62 /* CoreTextImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextImageData.h; sourceTree = "<group>"; };
 		682A10571C3BD1BF00659D62 /* CoreTextImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextImageData.m; sourceTree = "<group>"; };
 		6837974A1C3A4A0F00FD3432 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				682A10521C3B987F00659D62 /* coretext_image_1.jpg */,
-				682A10531C3B987F00659D62 /* cortext_image_2.jpg */,
+				682A10531C3B987F00659D62 /* coretext_image_2.jpg */,
 				6864300C1C0C2D8B00944195 /* Assets.xcassets */,
 				6837974A1C3A4A0F00FD3432 /* content.json */,
 			);
@@ -307,7 +307,7 @@
 				6864300D1C0C2D8B00944195 /* Assets.xcassets in Resources */,
 				682A10541C3B987F00659D62 /* coretext_image_1.jpg in Resources */,
 				6864300B1C0C2D8B00944195 /* Main.storyboard in Resources */,
-				682A10551C3B987F00659D62 /* cortext_image_2.jpg in Resources */,
+				682A10551C3B987F00659D62 /* coretext_image_2.jpg in Resources */,
 				6837974B1C3A4A0F00FD3432 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +484,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreTextDemo/CoreTextDemo-Prefix.pch";
 				INFOPLIST_FILE = CoreTextDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mogujie.NotificationTest.CoreTextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +499,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoreTextDemo/CoreTextDemo-Prefix.pch";
 				INFOPLIST_FILE = CoreTextDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mogujie.NotificationTest.CoreTextDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

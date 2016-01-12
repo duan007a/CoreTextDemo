@@ -27,6 +27,7 @@
 - (void)setImageArray:(NSMutableArray *)imageArray
 {
     _imageArray = imageArray;
+    [self fillImagePosition];
     
 }
 
@@ -41,6 +42,7 @@
     CGPoint lineOrigins[lineCount];
     CTFrameGetLineOrigins(self.ctFrame, CFRangeMake(0, 0), lineOrigins);
     
+    int imgIndex = 0;
     CoreTextImageData *imageData = self.imageArray[0];
     for (int i = 0; i < lineCount; ++i)
     {
@@ -50,16 +52,19 @@
         }
         CTLineRef line = (__bridge CTLineRef)lines[i];
         NSArray * runObjArray = (NSArray *)CTLineGetGlyphRuns(line);
-        for (id runObj in runObjArray) {
+        for (id runObj in runObjArray)
+        {
             CTRunRef run = (__bridge CTRunRef)runObj;
             NSDictionary *runAttributes = (NSDictionary *)CTRunGetAttributes(run);
             CTRunDelegateRef delegate = (__bridge CTRunDelegateRef)[runAttributes valueForKey:(id)kCTRunDelegateAttributeName];
-            if (delegate == nil) {
+            if (delegate == nil)
+            {
                 continue;
             }
             
             NSDictionary * metaDic = CTRunDelegateGetRefCon(delegate);
-            if (![metaDic isKindOfClass:[NSDictionary class]]) {
+            if (![metaDic isKindOfClass:[NSDictionary class]])
+            {
                 continue;
             }
             
@@ -81,10 +86,12 @@
             
             imageData.imagePosition = delegateBounds;
             imgIndex++;
-            if (imgIndex == self.imageArray.count) {
+            if (imgIndex == self.imageArray.count)
+            {
                 imageData = nil;
                 break;
-            } else {
+            } else
+            {
                 imageData = self.imageArray[imgIndex];
             }
         }

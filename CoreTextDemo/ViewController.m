@@ -25,6 +25,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"json"];
     
     CTFrameParserConfig *config = [CTFrameParserConfig new];
+    config.width = self.ctDisplayView.width;
     CoreTextData *data = [CTFrameParser parseTemplateFile:path config:config];
     self.ctDisplayView.data = data;
     self.ctDisplayView.height = data.height;

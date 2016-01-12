@@ -13,4 +13,6 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, assign) NSInteger position;
 
+@property (nonatomic, assign) CGRect imagePosition;
+
 @end
